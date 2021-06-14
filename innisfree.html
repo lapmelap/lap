@@ -1,0 +1,645 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>innisfree</title>
+    <style>
+       @font-face {
+         font-family: 'S-CoreDream-3Light';
+         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+         font-weight: normal;
+         font-style: normal;
+        }
+
+        * {
+           /*font-family: 'S-CoreDream-3Light';*/
+            padding: 0;
+            margin: 0;
+        }
+
+        .header {
+            font-family: 'S-CoreDream-3Light';
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            border-bottom: 2px solid #ebebeb;
+        }
+
+        .con_wrap {
+            position: relative;
+            width: 930px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .logo {
+            position: absolute;
+            top: 14px;
+            left: 0;
+            width: 181px;
+            height: 34px;
+            background: url(https://images.innisfree.co.kr/resources/web2/images/common/logo_basic.png) 0 100% no-repeat;
+        }
+
+        .wrap {
+            position: absolute;
+            top: 14px;
+            right: 0;
+        }
+        ul li {
+            float: left;
+            list-style: none;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        ul li a{
+           text-decoration: none;
+            color: black;
+        }
+        ul li a:hover{
+          font-size: 20px;
+          color: green;
+          font-weight: bolder;
+        }
+        li{
+            margin-left: 40px;
+        }
+
+        .menu{
+            display: inline-block;
+            line-height: 100px;
+        }
+
+        .menu2{
+            display: inline-block;
+            line-height: 100px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-big{
+          float: right;
+        } 
+        .carousel-wrap{
+           width: 1200px;
+           margin-left: auto;
+           margin-right: auto;
+        }     
+
+        .promote{
+          font-family: 'Noto Sans', sans-serif;
+          top: 0;
+          z-index: 999;
+          position: sticky;
+         height: 80px;
+         background-image: url(https://i.postimg.cc/Wz593cTw/img111.png);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+         width: 100%;
+      }
+      .info{
+         width: 800px;
+         margin-right: auto;
+         margin-left: auto;
+         padding: 10px;
+         text-align: center;
+      }
+      .info h3{
+         font-size: 20px;
+         line-height: 20px;
+         margin-bottom: 0px;
+         color: white;
+      }
+      
+      .promote a{
+         font-size: 14px;
+         display: inline-block;
+         border: 1px solid white;
+         border-radius: 20px;
+         width: 80px;
+         height: 30px;
+         line-height: 30px;
+         text-decoration: none;
+         text-align: center;
+         color: white;
+         margin: 0 5px;
+      }
+        .signin{
+           display: block;
+           margin-right: auto;
+           margin-left: auto;
+           width: 300px;
+        }
+        .lanking{
+           margin-left: auto;
+           margin-right: auto;
+           width: 1300px;
+        }
+        .subtitle{
+           font-family: 'S-CoreDream-3Light';
+           width: 300px;
+           margin-top: 44px;
+           text-align: center;
+           margin-right: auto;
+           margin-left: auto;
+           padding-bottom: 30px;
+           border-bottom: 2px solid black;
+           font-size: 24px;
+        }
+        .box{
+           margin-right: auto;
+           margin-left: auto;
+           margin-top: 32px;
+           margin-bottom: 60px;
+        }
+        .cir {
+            width: 180px;
+            height: 180px;
+            position: relative;
+            float: left;
+            border: 1px solid #000000;
+            background-color: white;
+            margin-top: 30px;
+            border-radius: 10%;
+        }
+        .cir1{
+           background-image: url(https://images.innisfree.co.kr/upload/product/29802_p_S_320.jpg?T202106130027);
+           background-repeat: no-repeat;
+           background-position: center center;
+           background-size: 85%;
+        }
+        .cir1:hover{
+          background-image: url(https://images.innisfree.co.kr/upload/product/29802_p1_S_320.jpg?T202106131907);
+          background-size: 100%;
+        }
+        .cir2{
+           background-image: url(https://images.innisfree.co.kr/upload/product/29819_l_S_320.jpg?T202106130027);
+           background-repeat: no-repeat;
+           background-position: center center;
+           background-size: 85%;
+        }
+        .cir2:hover{
+          background-image: url(https://images.innisfree.co.kr/upload/product/29802_p1_S_320.jpg?T202106131907);
+          background-size: 100%;
+        }
+        .cir3{
+           background-image: url(https://images.innisfree.co.kr/upload/product/29824_l_S_320.jpg?T202106130027);
+           background-repeat: no-repeat;
+           background-position: center center;
+           background-size: 85%;
+        }
+        .cir3:hover{
+          background-image: url(https://images.innisfree.co.kr/upload/product/29802_p1_S_320.jpg?T202106131907);
+          background-size: 100%;
+        }
+        .cir4{
+           background-image: url(https://images.innisfree.co.kr/upload/product/22596_l_S_320.png?T202106130027);
+           background-repeat: no-repeat;
+           background-position: center center;
+           background-size: 85%;
+        }
+        .cir4:hover{
+          background-image: url(https://images.innisfree.co.kr/upload/product/29459_l1_S_320.jpg?T202106131907);
+          background-size: 100%;
+        }
+        .cir5{
+           background-image: url(https://images.innisfree.co.kr/upload/product/29459_l_S_320.jpg?T202106130027);
+           background-repeat: no-repeat;
+           background-position: center center;
+           background-size: 85%;
+        }
+        .cir5:hover{
+          background-image: url(https://images.innisfree.co.kr/upload/product/29459_l1_S_320.jpg?T202106131907);
+          background-size: 100%;
+        }
+
+        .scir_top {
+            background: #266a31;
+            color: white;
+            left: 35%;
+            top: -15%;
+        }
+
+        .scir {
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #000000;
+        }
+       .clf::after{
+         content: '';
+         clear: both;
+         display: block;
+        }   
+       .set{
+        display: inline-block;
+        margin: auto;
+       }
+       .product{
+        font-family: 'Noto Sans', sans-serif;
+       }
+
+       .product p{
+         width: 180px;
+         margin-top: 12px;
+       }
+
+       .cir{
+        margin-bottom: 16px;
+       }
+       .md_img{
+          display: block;
+          margin-top: 40px;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
+        .md1{
+           display: inline-block;
+           background-image: url(https://images.innisfree.co.kr/upload/mainMng/BM06_4_pc.jpg?T202106131907);
+           background-size: cover;
+           width: 480px;
+           height: 480px;
+        }
+        .md1:hover{
+          background-image: url(https://i.postimg.cc/NFDyTswJ/1.png);
+          width: 480px;
+          height: 480px;
+        }
+        .md2{
+          display: inline-block;
+          background-image: url(https://images.innisfree.co.kr/upload/mainMng/BM06_1_pc.jpg?T202106140037);
+          background-size: cover;
+          width: 480px;
+          height: 480px;
+        }
+        .md2:hover{
+          background-image: url(https://i.postimg.cc/k5nGHghV/1.png);
+          width: 480px;
+          height: 480px;
+        }
+        .hotdeal{
+          margin-top: 60px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .menubox p{
+          margin: 0;
+          padding: 0;
+          font-size: 12px;
+          color: #ff3300;
+        }
+        .upbox{
+          text-align: center;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          display: grid;
+        }
+        .menubox{
+          float: left;
+          width: 100%;
+          font-family: 'Noto Sans', sans-serif;
+        }
+        .menubox:hover{
+         border: 1px solid black;
+        }
+        .menubox img{
+          width: 230px; 
+        }
+        .menucut{
+          clear: left;
+        }
+        .hotdeal{
+          padding: 0 240px;
+        }
+        .hotdeal h2{
+          font-weight: 900;
+          font-family: 'S-CoreDream-3Light';
+        }
+        .clf{
+              grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+              display: grid;
+        }
+        .membership{
+          margin-top: 100px;
+        }
+        .membership h2{
+          font-family: 'Noto Sans', sans-serif;
+          font-size: 28px;
+          font-weight: 600;
+        }
+        .icon{
+          margin-top: 20px;
+          border-radius: 50%;
+          background-color: #f3f3f3;
+        }
+        .list{
+          margin-top: 15px;
+          display: inline-block;
+          margin-bottom: 60px;
+        }
+        .list p{
+          margin-top: 15px;
+          text-align: center;
+          font-weight: 500;
+          font-size: 16px;
+          color: #666;
+        }
+
+        .list b{
+          font-size: 18px;
+          color: #222;
+        }
+        .bottombar{
+          border-top: 1px solid black;
+/*          border-bottom: 1px solid black;*/
+          padding: 10 0;
+        }
+        .bottomtext{
+          float: left;
+          font-size: 12px;
+        }
+        .bottomimg{
+          float: right;
+        }
+        .youtube{
+          width: 32px;
+          height: 22px;
+        }
+        .instagram{
+          width: 28px;
+          height: 28px;
+          margin-left: 16px;
+        }
+        .facebook{
+          width: 15px;
+          height: 28px;
+          margin-left: 16px;
+        }
+        .twitter{
+          width: 28px;
+          height: 24px;
+          margin-left: 16px;
+        }
+    </style>
+  </head>
+
+
+  <body>
+     <div class="header">
+        <div class="con_wrap">
+            <a href="innisfree.html"><h1 class="logo"></h1></a>
+            <div class="menu-big">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">핫딜</a></li>
+                        <li><a href="EVENT.html">이벤트</a></li>
+                        <li><a href="#">BEST</a></li>
+                        <li><a href="NEW.html">NEW</a></li>
+                        <li><a href="#">리뷰</a></li>
+                    </ul>
+                </div>
+
+                <div class="menu2">
+                    <ul>
+                        <li><a href="#"><img src="https://i.postimg.cc/651XRXFR/icon-search.png" id="img_menu"></a></li>
+                        <li><a href="#"><img src="https://i.postimg.cc/mZjcvPFs/icon-mypage.png" id="img_menu"></a></li>
+                        <li><a href="#"><img src="https://i.postimg.cc/k4c4PHGc/icon-cart.png" id="img_menu"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="promote">
+       <div class="info">
+         <h3>로그인 하시면 고객님께 딱! 맞는 제품을 추천해드립니다.</h3>
+      </div>
+        <div class="signin">
+           <a href="#" class="login">로그인</a>
+         <a href="#" class="signup">회원가입</a>
+      </div>
+    </div>
+
+
+     <div class="carousel-wrap">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images.innisfree.co.kr/upload/mainMng/BM03_905_left_pc.jpg?T202106121557" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.innisfree.co.kr/upload/mainMng/BM03_894_left_pc.jpg?T202106121557" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.innisfree.co.kr/upload/mainMng/BM03_929_left_pc.jpg?T202106121557" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+   </div>
+
+   <div class="lanking">
+      <h2 class="subtitle">온라인 실시간 랭킹</h2>
+      <div class="box">
+         <div class="clf">
+         <div class="set">
+             <div class="cirscir">
+               <div class="cir cir1">
+                    <div class="scir scir_top">1</div>
+                </div>
+                <div class="product">
+                  <p>그린티 씨드 세럼 [대용량]+증정 기프트</p>
+                  <h6><b>29,400</b>원</h6>
+                </div>
+             </div>
+            </div>
+          <div class="set">
+             <div class="cir cir2">
+                 <div class="scir scir_top">2</div>
+              </div>
+              <div class="product">
+                  <p>그린티 씨드 세럼 [대용량]+씨드 세럼</p>
+                  <h6><b>44,850</b>원</h6>
+              </div>
+          </div>
+          <div class="set">
+             <div class="cir cir3">
+                 <div class="scir scir_top">3</div>
+              </div>
+              <div class="product">
+                  <p>그린티 씨드 세럼 [대용량]+씨드 에센스 인 로션</p>
+                  <h6><b>40,300</b>원</h6>
+              </div>
+          </div>
+          <div class="set">
+             <div class="cir cir4">
+                 <div class="scir scir_top">4</div>
+              </div>
+              <div class="product">
+                  <p>포레스트 포맨 올인원 에센스</p>
+                  <h6><b>25,000</b>원</h6>
+              </div>
+          </div>
+          <div class="set">
+             <div class="cir cir5">
+                 <div class="scir scir_top">5</div>
+              </div>
+              <div class="product">
+                  <p>화산송이 카밍 모공 클레이 마스크</p>
+                  <h6><b>12,600</b>원</h6>
+              </div>
+          </div>
+          </div>
+       </div>
+   </div>
+
+   <div class="MD">
+      <h2 class="subtitle">MD 추천 상품</h2>
+      <div class="md_img">
+         <div class="md1"></div><div class="md2"></div>
+      </div>
+   </div>
+
+   <div class="hotdeal">
+     <h2>HOT DEAL</h2>
+     <div class="upbox">
+       <div class="menubox">
+         <img src="https://images.innisfree.co.kr/upload/product/16516_l_S_320.jpg?T202106131907">
+         <p style="color: green;">용량 2배, 가격 22% 할인!👀</p>
+         <h6>더마 미셀라 클렌징 워터</h6>
+         <h5><b>15,000</b>원</h5>
+       </div>
+       <div class="menubox">
+         <img src="https://images.innisfree.co.kr/upload/product/21176_l_S_320.png?T202106131907">
+         <p>동시구매 딜 + 추가 득템까지💚</p>
+         <h6>스페셜 케어 마스크 [풋&핸드]</h6>
+         <h5><b>2,500</b>원</h5>
+       </div>
+       <div class="menubox">
+         <img src="https://images.innisfree.co.kr/upload/product/29216_l_S_320.jpg?T202106131907">
+         <p style="color: #8e470a;">할인+증정 둘다 잡자!🔥</p>
+         <h6>애플 씨드 클렌징 오일</h6>
+         <h5><b>15,000</b>원</h5>
+       </div>
+       <div class="menubox">
+         <img src="https://images.innisfree.co.kr/upload/product/17357_l_S_320.jpg?T202106131907">
+         <p style="color: white;"> . </p>
+         <h6>그린티 클렌징 오일</h6>
+         <h5><b>18,000</b>원</h5>
+       </div>
+       <div class="menubox menucut">
+         <img src="https://images.innisfree.co.kr/upload/product/17356_l_S_320.jpg?T202106131907">
+         <p>동시구매 딜 + 추가 득템까지💚</p>
+         <h6>그린티 클렌징 워터</h6>
+         <h5><b>13,000</b>원</h5>
+       </div>
+       <div class="menubox">
+         <img src="https://images.innisfree.co.kr/upload/product/16938_l_S_320.jpg?T202106131907">
+         <p>동시구매 딜 + 추가 득템까지💚</p>
+         <h6>청보리 고마쥬 필링 마스크</h6>
+         <h5><b>10,000</b>원</h5>
+       </div>
+       <div class="menubox">
+         <img src="https://images.innisfree.co.kr/upload/product/12838_l_S_320.jpg?T202106131907">
+         <p>2동시구매 딜 + 추가 득템까지💚</p>
+         <h6>올리브 리얼 클렌징 오일</h6>
+         <h5><b>16,000</b>원</h5>
+       </div>
+       <div class="menubox">
+         <img src="https://images.innisfree.co.kr/upload/product/18518_l_S_320.jpg?T202106131907">
+         <p>동시구매 딜 + 추가 득템까지💚</p>
+         <h6>마이 메이크업 클렌저</h6>
+         <h5><b>10,000</b>원</h5>
+       </div>
+     </div>
+   </div>
+   <div class="hotdeal">
+     <h2>신제품</h2>
+     <div class="upbox">
+       <div class="menubox">
+         <img src="https://images.innisfree.co.kr/upload/product/29802_p_S_320.jpg?T202106131907">
+         <p style="color: green;">용량 2배, 가격 22% 할인!👀</p>
+         <h6>그린티 씨드 세럼 [대용량]</h6>
+         <h5><b>29,400</b>원</h5>
+       </div>
+       <div class="menubox">
+         <img src="https://images.innisfree.co.kr/upload/product/29576_l_S_320.jpg?T202106131907">
+         <p style="color: white;">. </p>
+         <h6>심플라벨 워터프루프 펜슬</h6>
+         <h5><b>10,000</b>원</h5>
+       </div>
+       <div class="menubox">
+         <img src="https://images.innisfree.co.kr/upload/product/29578_l_S_320.jpg?T202106131907">
+         <p style="color: white;"> .</p>
+         <h6>심플라벨 래스팅 펜슬 브로우</h6>
+         <h5><b>12,000</b>원</h5>
+       </div>
+       <div class="menubox">
+         <img src="https://images.innisfree.co.kr/upload/product/29816_l_S_320.jpg?T202106131907">
+         <p style="color: white;">. </p>
+         <h6>블랙티 유스 인핸싱 스킨</h6>
+         <h5><b>35,000</b>원</h5>
+       </div>
+   </div>
+  
+   <div class="membership">
+     <h2>이니스프리 멤버십 혜택 안내<span style="margin-left:10px; font-size: 0.6em; font-weight: 200;">(* 등급별 혜택 상이)</span></h2>
+     <p style="font-size: 18px;">이니스프리 멤버십 회원이 되시면 이니스프리에서 제공하는 다양한 혜택을 받으실 수 있습니다.</p>
+     <div>
+       <ul class="list">
+         <li>
+           <div class="icon"><img src="https://images.innisfree.co.kr/resources/web2/images/main/icon_mb1.png"></div>
+           <p><b>멤버십데이 혜택*</b><br>최대 30% 할인</p>
+         </li>
+         <li>
+           <div class="icon"><img src="https://images.innisfree.co.kr/resources/web2/images/main/icon_mb7.png"></div>
+           <p><b>시크릿쿠폰*</b><br>월1회 할인쿠폰제공</p>
+         </li>
+         <li>
+           <div class="icon"><img src="https://images.innisfree.co.kr/resources/web2/images/main/icon_mb3.png"></div>
+           <p><b>뷰티포인트 적립</b><br>결제 금액의 1% 적립</p>
+         </li>
+         <li>
+           <div class="icon"><img src="https://images.innisfree.co.kr/resources/web2/images/main/icon_mb4.png"></div>
+           <p><b>생일 혜택*</b><br>40% 할인 쿠폰 지급</p>
+         </li>
+         <li>
+           <div class="icon"><img src="https://images.innisfree.co.kr/resources/web2/images/main/icon_mb8.png"></div>
+           <p><b>우수회원키트 제공*</b><br>연 2회</p>
+         </li>
+       </ul>
+     </div>
+   </div>
+
+   <div class="bottombar">
+     <div class="bottomtext">
+       <p>서비스 이용약관 <b>개인정보처리방침</b> 영상정보처리기기 운영/관리 방침 공지사항 임직원서비스</p>
+     </div>
+     <div class="bottomimg">
+       <img class="youtube" src="https://images.innisfree.co.kr/resources/web2/images/common/icon_youtube.png"><img class="instagram" src="https://images.innisfree.co.kr/resources/web2/images/common/icon_instagram.png"><img class="facebook" src="https://images.innisfree.co.kr/resources/web2/images/common/icon_facebook.png"><img class="twitter" src="https://images.innisfree.co.kr/resources/web2/images/common/icon_twitter.png">
+     </div>
+   </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
